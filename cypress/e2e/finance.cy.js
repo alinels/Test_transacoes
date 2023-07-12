@@ -8,13 +8,12 @@ describe('Transacoes', () => {
     it('Cadastrar Entrada', () => {
         
         NovaTransacao("Aline", 6000)
-       
         
        cy.get("tbody tr td.description").should("have.text", "Aline")
 
     });
 
-    it('Transcao de saida', () => {
+    it('Transacao de saida', () => {
        NovaTransacao("Livro", -200)
        cy.get("tbody tr td.description").should("have.text","Livro")
     
