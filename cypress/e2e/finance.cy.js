@@ -25,15 +25,17 @@ describe('Transacoes', () => {
         NovaTransacao("Novo contrato", 4000)
         NovaTransacao("Auditoria", 5000 )
          
+        /*cy.contains(".description", "Aline") //td
+        .parent() //tr 
+         .find('img')
+        .click()*/
+
         cy.contains(".description", "Aline")
-        .parent()
-        .find('img')
+        .siblings()
+        .children('img')
         .click()
 
-        cy.contains(".description", "Auditoria")
-        .parent()
-        .find('img')
-        .click()
+        cy.get('tbody tr').should("have.length",2)
     });
 });
 
