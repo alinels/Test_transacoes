@@ -24,11 +24,6 @@ describe('Transacoes', () => {
         NovaTransacao("Aline", 100 )
         NovaTransacao("Novo contrato", 4000)
         NovaTransacao("Auditoria", 5000 )
-         
-        /*cy.contains(".description", "Aline") //td
-        .parent() //tr 
-         .find('img')
-        .click()*/
 
         cy.contains(".description", "Aline")
         .siblings()
